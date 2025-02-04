@@ -15,6 +15,11 @@ class Teknolocik extends Urun {
   void urunBilgisi() {
     print("elektronik: $ad,Marka: $marka,Fiyat: $fiyat TL");
   }
+  
+  @override
+  void urunInfo() {
+    
+  }
 }
 class Giyim extends Urun {
   String beden;
@@ -27,7 +32,7 @@ class Giyim extends Urun {
   }
 }
 
-// 
+ 
 class Kitap extends Urun {
   String yazar;
   Kitap(String ad,double fiyat,this.yazar) : super(ad, fiyat);
@@ -38,7 +43,7 @@ class Kitap extends Urun {
   }
 }
 
-// 
+
 class Sepet {
   List<Urun> urunler = [];
 
