@@ -4,7 +4,7 @@ class Library {
   String yayinci;
   String bookNo;
   //benim kütüphanem var kütüphanede isim yazar yayinci ve yazara gore sınfılarım var
-  //ben istedigim kitabı arayabilicem
+  //kütüphaneme kitap ekley,p silebileiiym
   
 
   Library(this.name,this.writer,this.yayinci,this.bookNo);
@@ -20,13 +20,13 @@ class Library {
   }
 
   void kitapSil(String bookNo) {
-    kitaps.removeWhere((kitap) => kitap.bookNo == bookNo);
+    kitaps.removeWhere((kitap) => kitap.bookNo == bookNo); //listeden ürün kaldırmak icin kullandım
     print("ISBN numarası $bookNo kitabı sildim.");
   }
 
   
 void kitaplariListele() {
-    if (kitaps.isEmpty) {//kütüphanem bossa boş der
+    if (kitaps.isEmpty) {//kütüphanem bossa boş de
       print("kitap yok burada");
     } else {
       print("the books that in my library");

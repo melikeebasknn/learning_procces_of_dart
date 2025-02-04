@@ -24,7 +24,7 @@ class Teknolocik extends Urun {
 class Giyim extends Urun {
   String beden;
 
-  Giyim(String ad,double fiyat,this.beden) : super(ad,fiyat);
+  Giyim(String ad,double fiyat,this.beden) : super(ad,fiyat); //üst sınıftaki const ya da methoda erişim için super
 
   @override
   void urunInfo() {
