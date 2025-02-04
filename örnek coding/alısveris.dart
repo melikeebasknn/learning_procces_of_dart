@@ -9,39 +9,36 @@ abstract class Urun {
 
 class Teknolocik extends Urun {
   String marka;
-  Teknolocik(String ad, double fiyat, this.marka) : super(ad, fiyat);
+  Teknolocik(String ad,double fiyat,this.marka) : super(ad,fiyat);
 
   @override
   void urunBilgisi() {
-    print("elektronik: $ad, Marka: $marka, Fiyat: $fiyat TL");
+    print("elektronik: $ad,Marka: $marka,Fiyat: $fiyat TL");
   }
 }
-
-
 class Giyim extends Urun {
   String beden;
 
-  Giyim(String ad, double fiyat, this.beden) : super(ad, fiyat);
+  Giyim(String ad,double fiyat,this.beden) : super(ad,fiyat);
 
   @override
   void urunInfo() {
-    print("👕 Giyim: $ad, Beden: $beden, Fiyat: $fiyat TL");
+    print(" Giyim: $ad,Beden:$beden,Fiyat: $fiyat TL");
   }
 }
 
-// 📖 Kitap Ürün Sınıfı
+// 
 class Kitap extends Urun {
   String yazar;
-
-  Kitap(String ad, double fiyat, this.yazar) : super(ad, fiyat);
+  Kitap(String ad,double fiyat,this.yazar) : super(ad, fiyat);
 
   @override
   void urunInfo() {
-    print("📖 Kitap: $ad, Yazar: $yazar, Fiyat: $fiyat TL");
+    print("Kitap: $ad,Yazar: $yazar,Fiyat: $fiyat TL");
   }
 }
 
-// 🛒 Alışveriş Sepeti
+// 
 class Sepet {
   List<Urun> urunler = [];
 
@@ -58,7 +55,7 @@ class Sepet {
   }
 
   double toplamFiyat() {
-    double toplam = urunler.fold(0, (sum, urun) => sum + urun.fiyat);
+    double toplam = urunler.fold(0, (sum,urun) => sum + urun.fiyat);
     return toplam;
   }
 }
@@ -67,10 +64,10 @@ class Sepet {
 void main() {
   Sepet sepet = Sepet();
 
-  // Ürünleri Oluştur
-  var telefon = Teknolocik("iPhone 14", 45000, "Iphone");
-  var tshirt = Giyim("jean", 400, "38");
-  var roman = Kitap("nutuk", 500, "Atatürk");
+
+  var telefon = Teknolocik("iPhone 14",45000,"Iphone");
+  var tshirt = Giyim("jean",400,"38");
+  var roman = Kitap("nutuk",500,"Atatürk");
 
   
   sepet.urunEkle(telefon);

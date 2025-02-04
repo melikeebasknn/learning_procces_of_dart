@@ -7,17 +7,13 @@ class Library {
   //ben istedigim kitabı arayabilicem
   
 
-  Library(this.name, this.writer, this.yayinci, this.bookNo);
-
-  
+  Library(this.name,this.writer,this.yayinci,this.bookNo);
   String toString() {
     return "Kitap: $name, yazan: $writer, yayınevi: $yayinci, ISBN: $bookNo";
   }
 }
-
-class MyLibrary {
+  class MyLibrary {
   List<Library> kitaps = [];
-
   void kitapEkle(Library kitap) {
     kitaps.add(kitap);
     print("${kitap.name} kütüphaneye ekledim.");
@@ -29,8 +25,7 @@ class MyLibrary {
   }
 
   
-
-  void kitaplariListele() {
+void kitaplariListele() {
     if (kitaps.isEmpty) {//kütüphanem bossa boş der
       print("kitap yok burada");
     } else {
@@ -38,7 +33,6 @@ class MyLibrary {
       for (var kitap in kitaps) {//eger degilse kitapları listelerr
         print(kitap);
       }
-
       
     }
   }
@@ -47,9 +41,9 @@ class MyLibrary {
 void main() {
   var kutuphanem = MyLibrary();
 
-  var book1 = Library("Nutuk", "Atatürk", "Can yayın", "9789750726439");
-  var book2 = Library("Beyaz zambaklar ülkesinde", "Grigory petro", "iş bank", "9786053410877");
-  var book3 = Library("1984", "George Orwell", "Can yayın", "9789750718533");
+  var book1= Library("Nutuk", "Atatürk", "Can yayın", "9789750726439");
+  var book2= Library("Beyaz zambaklar ülkesinde", "Grigory petro", "iş bank", "9786053410877");
+  var book3= Library("1984", "George Orwell", "Can yayın", "9789750718533");
 
   kutuphanem.kitapEkle(book1);
   kutuphanem.kitapEkle(book2);
